@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root{
+  --background:#F8F6F2;
+  --foreground:#181818;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family:var(--font-body),sans-serif;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-heading),serif;
+}
