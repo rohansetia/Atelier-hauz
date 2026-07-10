@@ -1,0 +1,3 @@
+"use client";
+import Image from "next/image";
+export default function ProjectMasterplan(){return <section className="bg-[#080808] py-24 text-white"><div className="max-w-7xl mx-auto px-6"><h2 className="text-5xl font-light mb-10">Master Plan</h2><div className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-white/10"><Image src="/images/projects/shri-sai-enclave/masterplan.jpg" alt="Masterplan" fill className="object-contain bg-[#111]"/></div></div></section>}

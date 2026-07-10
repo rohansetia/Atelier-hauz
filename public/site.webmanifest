@@ -1,0 +1,16 @@
+{
+  "name": "AtelierHauz",
+  "short_name": "AtelierHauz",
+  "description": "Luxury Real Estate Developments in Rajasthan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B0B",
+  "theme_color": "#0B0B0B",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

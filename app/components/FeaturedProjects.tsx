@@ -1,66 +1,100 @@
-export default function FeaturedProjects() {
-  const projects = [
-    {
-      name: "Shri Sai Enclave",
-      location: "Hanumangarh, Rajasthan",
-      status: "Ongoing",
-    },
-    {
-      name: "Luxury Villa Community",
-      location: "Coming Soon",
-      status: "Upcoming",
-    },
-    {
-      name: "Green Valley Residences",
-      location: "Coming Soon",
-      status: "Upcoming",
-    },
-  ];
+"use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+export default function FeaturedProject() {
   return (
-    <section className="bg-[#111111] text-white py-28 px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#0B0B0B] py-28 px-6">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-        <p className="uppercase tracking-[0.4em] text-[#C8A56B] mb-3">
-          Signature Developments
-        </p>
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: .8 }}
+          viewport={{ once: true }}
+          className="overflow-hidden rounded-3xl"
+        >
+          <Image
+            src="/masterplan/layout.jpg"
+            alt="Shri Sai Enclave"
+            width={1800}
+            height={1200}
+            className="w-full h-full object-cover hover:scale-105 duration-700"
+          />
+        </motion.div>
 
-        <h2 className="text-5xl font-bold mb-16">
-          Featured Projects
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: .8 }}
+          viewport={{ once: true }}
+        >
 
-        <div className="grid md:grid-cols-3 gap-8">
+          <p className="uppercase tracking-[8px] text-[#C8A96A] text-sm mb-4">
+            Featured Project
+          </p>
 
-          {projects.map((project) => (
-            <div
-              key={project.name}
-              className="rounded-3xl overflow-hidden bg-[#1a1a1a] border border-white/10 hover:border-[#C8A56B] transition-all"
-            >
-              <div className="h-64 bg-gradient-to-br from-neutral-700 to-neutral-900"></div>
+          <h2 className="text-white text-5xl font-light leading-tight">
+            Shri Sai Enclave
+          </h2>
 
-              <div className="p-8">
+          <p className="text-gray-400 mt-8 leading-8 text-lg">
+            A thoughtfully planned residential development with wide roads,
+            premium infrastructure, landscaped surroundings and carefully
+            designed plots that offer a balanced lifestyle for modern families.
+          </p>
 
-                <span className="text-[#C8A56B] text-sm uppercase">
-                  {project.status}
-                </span>
+          <div className="grid grid-cols-2 gap-8 mt-12">
 
-                <h3 className="text-2xl font-semibold mt-3">
-                  {project.name}
-                </h3>
-
-                <p className="text-gray-400 mt-2">
-                  {project.location}
-                </p>
-
-                <button className="mt-8 border border-[#C8A56B] px-5 py-3 rounded-full hover:bg-[#C8A56B] hover:text-black transition">
-                  View Project
-                </button>
-
-              </div>
+            <div>
+              <p className="text-[#C8A96A] text-3xl font-light">
+                99
+              </p>
+              <span className="text-gray-500">
+                Residential Plots
+              </span>
             </div>
-          ))}
 
-        </div>
+            <div>
+              <p className="text-[#C8A96A] text-3xl font-light">
+                11
+              </p>
+              <span className="text-gray-500">
+                Commercial Shops
+              </span>
+            </div>
+
+            <div>
+              <p className="text-[#C8A96A] text-3xl font-light">
+                60 ft
+              </p>
+              <span className="text-gray-500">
+                Main Road
+              </span>
+            </div>
+
+            <div>
+              <p className="text-[#C8A96A] text-3xl font-light">
+                Premium
+              </p>
+              <span className="text-gray-500">
+                Location
+              </span>
+            </div>
+
+          </div>
+
+          <Link
+            href="/projects/shri-sai-enclave"
+            className="inline-block mt-12 border border-[#C8A96A] text-[#C8A96A] px-10 py-4 rounded-full hover:bg-[#C8A96A] hover:text-black duration-300"
+          >
+            Explore Project
+          </Link>
+
+        </motion.div>
+
       </div>
     </section>
   );

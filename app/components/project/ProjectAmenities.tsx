@@ -1,0 +1,4 @@
+"use client";
+import {Trees,ShieldCheck,Car,Building2,Lightbulb,Droplets} from "lucide-react";
+const a=[["Green Spaces",Trees],["24/7 Security",ShieldCheck],["Parking",Car],["Commercial Zone",Building2],["Street Lighting",Lightbulb],];
+export default function ProjectAmenities(){return <section className="bg-[#0B0B0B] py-24 text-white"><div className="max-w-7xl mx-auto px-6"><h2 className="text-5xl font-light mb-12">Amenities</h2><div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">{a.map(([t,Icon]:any)=><div key={t} className="rounded-3xl border border-white/10 p-8 bg-white/5"><Icon className="text-[#C8A96A]"/><h3 className="mt-5 text-xl">{t}</h3></div>)}</div></div></section>}
